@@ -237,6 +237,6 @@ Ce projet est sous licence MIT.
 
 ## 👤 Auteur
 
-Salima Qritel 
+Eng. Toufali Oumaima
 
 
