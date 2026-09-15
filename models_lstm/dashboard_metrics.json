@@ -1,0 +1,60 @@
+{
+  "model_performance": {
+    "1h": {
+      "train_mae": 0.5288602085255865,
+      "train_rmse": 0.6964899529208795,
+      "train_r2": 0.9708057869192444,
+      "test_mae": 0.5988133748372396,
+      "test_rmse": 0.8427286276405941,
+      "test_r2": 0.9457709687064028
+    },
+    "3h": {
+      "train_mae": 0.7420278030680275,
+      "train_rmse": 0.9816201408944318,
+      "train_r2": 0.9420210212035572,
+      "test_mae": 0.8653823974713758,
+      "test_rmse": 1.2016862776643704,
+      "test_r2": 0.8897347780684199
+    },
+    "6h": {
+      "train_mae": 0.896580524064772,
+      "train_rmse": 1.1679041677149251,
+      "train_r2": 0.9179478614491217,
+      "test_mae": 1.0233225965470205,
+      "test_rmse": 1.4207154889566318,
+      "test_r2": 0.8459704828703344
+    }
+  },
+  "data_quality": {
+    "temperature": {
+      "completeness_pct": 100.0
+    },
+    "humidity": {
+      "completeness_pct": 100.0
+    },
+    "wind_speed": {
+      "completeness_pct": 100.0
+    },
+    "pressure": {
+      "completeness_pct": 100.0
+    },
+    "cloud_cover": {
+      "completeness_pct": 100.0
+    },
+    "precipitation": {
+      "completeness_pct": 100.0
+    },
+    "hour_sin": {
+      "completeness_pct": 100.0
+    },
+    "hour_cos": {
+      "completeness_pct": 100.0
+    },
+    "day_sin": {
+      "completeness_pct": 100.0
+    },
+    "day_cos": {
+      "completeness_pct": 100.0
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "type": "record",
+  "name": "RawWeather",
+  "namespace": "weather",
+  "fields": [
+    {"name": "latitude", "type": "double"},
+    {"name": "longitude", "type": "double"},
+    {"name": "elevation", "type": ["null", "double"], "default": null},
+    {"name": "current", "type": {
+      "type": "record",
+      "name": "RawCurrent",
+      "fields": [
+        {"name": "time", "type": "string"},
+        {"name": "temperature_2m", "type": ["null", "double"], "default": null},
+        {"name": "relative_humidity_2m", "type": ["null", "int"], "default": null},
+        {"name": "precipitation", "type": ["null", "double"], "default": null},
+        {"name": "wind_speed_10m", "type": ["null", "double"], "default": null},
+        {"name": "wind_direction_10m", "type": ["null", "int"], "default": null},
+        {"name": "cloud_cover", "type": ["null", "int"], "default": null},
+        {"name": "pressure_msl", "type": ["null", "double"], "default": null}
+      ]
+    }},
+    {"name": "current_units", "type": {
+      "type": "record",
+      "name": "RawCurrentUnits",
+      "fields": [
+        {"name": "temperature_2m", "type": ["null", "string"], "default": "°C"},
+        {"name": "relative_humidity_2m", "type": ["null", "string"], "default": "%"},
+        {"name": "precipitation", "type": ["null", "string"], "default": "mm"},
+        {"name": "wind_speed_10m", "type": ["null", "string"], "default": "km/h"},
+        {"name": "wind_direction_10m", "type": ["null", "string"], "default": "°"},
+        {"name": "cloud_cover", "type": ["null", "string"], "default": "%"},
+        {"name": "pressure_msl", "type": ["null", "string"], "default": "hPa"}
+      ]
+    }},
+    {"name": "hourly", "type": {
+      "type": "record",
+      "name": "RawHourly",
+      "fields": [
+        {"name": "time", "type": {"type": "array", "items": "string"}},
+        {"name": "temperature_2m", "type": {"type": "array", "items": ["null", "double"]}},
+        {"name": "relative_humidity_2m", "type": {"type": "array", "items": ["null", "int"]}},
+        {"name": "precipitation_probability", "type": {"type": "array", "items": ["null", "int"]}},
+        {"name": "precipitation", "type": {"type": "array", "items": ["null", "double"]}},
+        {"name": "wind_speed_10m", "type": {"type": "array", "items": ["null", "double"]}},
+        {"name": "cloud_cover", "type": {"type": "array", "items": ["null", "int"]}},
+        {"name": "pressure_msl", "type": {"type": "array", "items": ["null", "double"]}, "default": []}
+      ]
+    }},
+    {"name": "metadata", "type": {
+      "type": "record",
+      "name": "RawMetadata",
+      "fields": [
+        {"name": "source", "type": "string"},
+        {"name": "location", "type": "string"},
+        {"name": "timestamp", "type": "string"},
+        {"name": "fetch_time", "type": ["null", "string"], "default": null}
+      ]
+    }}
+  ]
+}
+

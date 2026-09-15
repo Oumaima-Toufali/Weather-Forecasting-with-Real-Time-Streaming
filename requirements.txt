@@ -1,0 +1,33 @@
+# Path: requirements.txt
+# API et requêtes HTTP
+requests
+aiohttp
+
+# Kafka pour ingestion / production
+kafka-python
+confluent-kafka
+fastavro
+tenacity
+
+# Sérialisation et traitement léger
+pandas
+pyarrow
+
+# Dashboard
+streamlit
+
+# Gestion des variables d'environnement
+python-dotenv
+
+# Tests unitaires
+pytest
+
+scikit-learn
+xgboost
+joblib
+
+# Deep Learning (optionnel, pour LSTM)
+tensorflow>=2.10.0
+
+
+plotly

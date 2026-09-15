@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "WeatherPrediction",
+  "namespace": "weather",
+  "fields": [
+    { "name": "event_time", "type": "string" },
+    { "name": "horizon_hours", "type": "int" },
+    { "name": "temperature_prediction", "type": "double" },
+    { "name": "model_name", "type": "string" },
+    { "name": "model_version", "type": "string" },
+    { "name": "created_at", "type": "string" }
+  ]
+}
+

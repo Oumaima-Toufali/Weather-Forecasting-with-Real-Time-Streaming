@@ -1,0 +1,31 @@
+{
+  "feature_columns": [
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "pressure",
+    "cloud_cover",
+    "precipitation",
+    "lag_1h",
+    "lag_3h",
+    "lag_6h",
+    "pressure_lag_1h",
+    "pressure_lag_3h",
+    "humidity_lag_1h",
+    "humidity_lag_3h",
+    "rolling_mean_3h",
+    "rolling_mean_6h",
+    "pressure_rolling_mean_3h",
+    "pressure_rolling_mean_6h",
+    "delta_1h",
+    "delta_3h",
+    "pressure_delta_1h",
+    "pressure_delta_3h",
+    "hour_sin",
+    "hour_cos",
+    "day_sin",
+    "day_cos"
+  ],
+  "model_type": "random_forest",
+  "n_estimators": 100
+}

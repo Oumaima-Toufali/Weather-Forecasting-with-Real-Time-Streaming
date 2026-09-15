@@ -1,0 +1,155 @@
+{
+  "model_performance": {
+    "1h": {
+      "train_mae": 0.30721289875486696,
+      "train_rmse": 0.40948180132769046,
+      "train_r2": 0.9898985878378306,
+      "test_mae": 0.5484245669135391,
+      "test_rmse": 0.8030794928733027,
+      "test_r2": 0.9508052296383919
+    },
+    "3h": {
+      "train_mae": 0.5358909282021197,
+      "train_rmse": 0.6960496551682913,
+      "train_r2": 0.9708310324524649,
+      "test_mae": 0.923127217313972,
+      "test_rmse": 1.3265164164464245,
+      "test_r2": 0.8657473344581372
+    },
+    "6h": {
+      "train_mae": 0.6304252545891246,
+      "train_rmse": 0.8197972707757853,
+      "train_r2": 0.9595472642755039,
+      "test_mae": 1.129143423096153,
+      "test_rmse": 1.636257329942004,
+      "test_r2": 0.7952924187648709
+    }
+  },
+  "data_quality": {
+    "temperature": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "humidity": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "wind_speed": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "pressure": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "cloud_cover": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "precipitation": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "lag_1h": {
+      "non_null": 8063,
+      "total": 8064,
+      "completeness_pct": 99.99
+    },
+    "lag_3h": {
+      "non_null": 8061,
+      "total": 8064,
+      "completeness_pct": 99.96
+    },
+    "lag_6h": {
+      "non_null": 8058,
+      "total": 8064,
+      "completeness_pct": 99.93
+    },
+    "pressure_lag_1h": {
+      "non_null": 8063,
+      "total": 8064,
+      "completeness_pct": 99.99
+    },
+    "pressure_lag_3h": {
+      "non_null": 8061,
+      "total": 8064,
+      "completeness_pct": 99.96
+    },
+    "humidity_lag_1h": {
+      "non_null": 8063,
+      "total": 8064,
+      "completeness_pct": 99.99
+    },
+    "humidity_lag_3h": {
+      "non_null": 8061,
+      "total": 8064,
+      "completeness_pct": 99.96
+    },
+    "rolling_mean_3h": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "rolling_mean_6h": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "pressure_rolling_mean_3h": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "pressure_rolling_mean_6h": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "delta_1h": {
+      "non_null": 8063,
+      "total": 8064,
+      "completeness_pct": 99.99
+    },
+    "delta_3h": {
+      "non_null": 8061,
+      "total": 8064,
+      "completeness_pct": 99.96
+    },
+    "pressure_delta_1h": {
+      "non_null": 8063,
+      "total": 8064,
+      "completeness_pct": 99.99
+    },
+    "pressure_delta_3h": {
+      "non_null": 8061,
+      "total": 8064,
+      "completeness_pct": 99.96
+    },
+    "hour_sin": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "hour_cos": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "day_sin": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    },
+    "day_cos": {
+      "non_null": 8064,
+      "total": 8064,
+      "completeness_pct": 100.0
+    }
+  }
+}

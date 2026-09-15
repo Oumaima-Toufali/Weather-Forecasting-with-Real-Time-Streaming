@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "WeatherPredictionQuantiles",
+  "namespace": "weather",
+  "fields": [
+    { "name": "event_time", "type": "string" },
+    { "name": "horizon_hours", "type": "int" },
+    { "name": "temperature_p10", "type": "double" },
+    { "name": "temperature_p50", "type": "double" },
+    { "name": "temperature_p90", "type": "double" },
+    { "name": "model_name", "type": "string" },
+    { "name": "model_version", "type": "string" },
+    { "name": "created_at", "type": "string" }
+  ]
+}
+
+

@@ -1,0 +1,103 @@
+{
+  "type": "record",
+  "name": "FeaturesWeather",
+  "namespace": "weather",
+  "fields": [
+    {"name": "location", "type": {
+      "type": "record",
+      "name": "FeaturesLocation",
+      "fields": [
+        {"name": "latitude", "type": "double"},
+        {"name": "longitude", "type": "double"},
+        {"name": "elevation", "type": ["null", "double"], "default": null}
+      ]
+    }},
+    {"name": "timestamp", "type": "string"},
+    {"name": "base_features", "type": {
+      "type": "record",
+      "name": "BaseFeatures",
+      "fields": [
+        {"name": "temp_current", "type": ["null", "double"], "default": null},
+        {"name": "humidity_current", "type": ["null", "double"], "default": null},
+        {"name": "wind_current", "type": ["null", "double"], "default": null},
+        {"name": "pressure_current", "type": ["null", "double"], "default": null},
+        {"name": "cloud_cover_current", "type": ["null", "double"], "default": null},
+        {"name": "precipitation_current", "type": ["null", "double"], "default": null}
+      ]
+    }},
+    {"name": "historical_features", "type": {
+      "type": "record",
+      "name": "HistoricalFeatures",
+      "fields": [
+        {"name": "temp_rolling_3h", "type": ["null", {"type": "record", "name": "Rolling3h", "fields": [
+          {"name": "mean_3h", "type": ["null", "double"], "default": null},
+          {"name": "std_3h", "type": ["null", "double"], "default": null},
+          {"name": "min_3h", "type": ["null", "double"], "default": null},
+          {"name": "max_3h", "type": ["null", "double"], "default": null}
+        ]}], "default": null},
+        {"name": "temp_rolling_6h", "type": ["null", {"type": "record", "name": "Rolling6h", "fields": [
+          {"name": "mean_6h", "type": ["null", "double"], "default": null},
+          {"name": "std_6h", "type": ["null", "double"], "default": null},
+          {"name": "min_6h", "type": ["null", "double"], "default": null},
+          {"name": "max_6h", "type": ["null", "double"], "default": null}
+        ]}], "default": null},
+        {"name": "temp_deltas", "type": {
+          "type": "record",
+          "name": "TempDeltas",
+          "fields": [
+            {"name": "delta_1h", "type": ["null", "double"], "default": null},
+            {"name": "delta_3h", "type": ["null", "double"], "default": null},
+            {"name": "delta_6h", "type": ["null", "double"], "default": null},
+            {"name": "delta_12h", "type": ["null", "double"], "default": null}
+          ]
+        }},
+        {"name": "temp_roc_3h", "type": ["null", "double"], "default": null},
+        {"name": "temp_roc_6h", "type": ["null", "double"], "default": null},
+        {"name": "temp_lags", "type": {
+          "type": "record",
+          "name": "TempLags",
+          "fields": [
+            {"name": "lag_1h", "type": ["null", "double"], "default": null},
+            {"name": "lag_2h", "type": ["null", "double"], "default": null},
+            {"name": "lag_3h", "type": ["null", "double"], "default": null},
+            {"name": "lag_6h", "type": ["null", "double"], "default": null},
+            {"name": "lag_12h", "type": ["null", "double"], "default": null}
+          ]
+        }},
+        {"name": "temp_volatility_6h", "type": ["null", "double"], "default": null}
+      ]
+    }},
+    {"name": "cyclical_features", "type": {
+      "type": "record",
+      "name": "CyclicalFeatures",
+      "fields": [
+        {"name": "hour_sin", "type": ["null", "double"], "default": null},
+        {"name": "hour_cos", "type": ["null", "double"], "default": null},
+        {"name": "day_sin", "type": ["null", "double"], "default": null},
+        {"name": "day_cos", "type": ["null", "double"], "default": null},
+        {"name": "is_day", "type": ["null", "int"], "default": null},
+        {"name": "is_weekend", "type": ["null", "int"], "default": null}
+      ]
+    }},
+    {"name": "target_labels", "type": {
+      "type": "record",
+      "name": "TargetLabels",
+      "fields": [
+        {"name": "temp_target_1h", "type": ["null", "double"], "default": null},
+        {"name": "temp_target_3h", "type": ["null", "double"], "default": null},
+        {"name": "temp_target_6h", "type": ["null", "double"], "default": null}
+      ]
+    }},
+    {"name": "metadata", "type": {
+      "type": "record",
+      "name": "FeaturesMetadata",
+      "fields": [
+        {"name": "feature_engineered_at", "type": "string"},
+        {"name": "history_size", "type": "int"},
+        {"name": "samples_accumulated", "type": "int"},
+        {"name": "feature_count", "type": "int"}
+      ]
+    }}
+  ]
+}
+

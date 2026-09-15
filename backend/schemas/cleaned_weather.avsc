@@ -1,0 +1,76 @@
+{
+  "type": "record",
+  "name": "CleanedWeather",
+  "namespace": "weather",
+  "fields": [
+    {"name": "location", "type": {
+      "type": "record",
+      "name": "CleanedLocation",
+      "fields": [
+        {"name": "latitude", "type": "double"},
+        {"name": "longitude", "type": "double"},
+        {"name": "elevation", "type": ["null", "double"], "default": null}
+      ]
+    }},
+    {"name": "event_time", "type": ["null", "string"], "default": null},
+    {"name": "current", "type": {
+      "type": "record",
+      "name": "CleanedCurrent",
+      "fields": [
+        {"name": "time", "type": ["null", "string"], "default": null},
+        {"name": "temperature_2m", "type": ["null", "double"], "default": null},
+        {"name": "relative_humidity_2m", "type": ["null", "int"], "default": null},
+        {"name": "precipitation", "type": ["null", "double"], "default": null},
+        {"name": "wind_speed_10m", "type": ["null", "double"], "default": null},
+        {"name": "wind_direction_10m", "type": ["null", "int"], "default": null},
+        {"name": "cloud_cover", "type": ["null", "int"], "default": null},
+        {"name": "pressure_msl", "type": ["null", "double"], "default": null},
+        {"name": "units", "type": {
+          "type": "record",
+          "name": "CleanedUnits",
+          "fields": [
+            {"name": "temperature", "type": "string"},
+            {"name": "humidity", "type": "string"},
+            {"name": "precipitation", "type": "string"},
+            {"name": "wind_speed", "type": "string"},
+            {"name": "pressure", "type": "string"}
+          ]
+        }}
+      ]
+    }},
+    {"name": "hourly", "type": {
+      "type": "record",
+      "name": "CleanedHourly",
+      "fields": [
+        {"name": "time", "type": {"type": "array", "items": "string"}},
+        {"name": "temperature_2m", "type": {"type": "array", "items": ["null", "double"]}},
+        {"name": "relative_humidity_2m", "type": {"type": "array", "items": ["null", "int"]}},
+        {"name": "precipitation_probability", "type": {"type": "array", "items": ["null", "int"]}},
+        {"name": "precipitation", "type": {"type": "array", "items": ["null", "double"]}},
+        {"name": "wind_speed_10m", "type": {"type": "array", "items": ["null", "double"]}},
+        {"name": "cloud_cover", "type": {"type": "array", "items": ["null", "int"]}},
+        {"name": "pressure_msl", "type": {"type": "array", "items": ["null", "double"]}, "default": []}
+      ]
+    }},
+    {"name": "metadata", "type": {
+      "type": "record",
+      "name": "CleanedMetadata",
+      "fields": [
+        {"name": "source", "type": "string"},
+        {"name": "location", "type": "string"},
+        {"name": "timestamp", "type": ["null", "string"], "default": null},
+        {"name": "normalized_at", "type": "string"},
+        {"name": "data_quality", "type": {
+          "type": "record",
+          "name": "DataQuality",
+          "fields": [
+            {"name": "completeness", "type": "double"},
+            {"name": "has_anomalies", "type": "boolean"},
+            {"name": "validation_errors", "type": {"type": "array", "items": "string"}}
+          ]
+        }}
+      ]
+    }}
+  ]
+}
+

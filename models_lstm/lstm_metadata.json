@@ -1,0 +1,27 @@
+{
+  "model_type": "lstm",
+  "timesteps": 24,
+  "n_features": 10,
+  "lstm_units": [
+    64,
+    32
+  ],
+  "dropout_rate": 0.2,
+  "feature_columns": [
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "pressure",
+    "cloud_cover",
+    "precipitation",
+    "hour_sin",
+    "hour_cos",
+    "day_sin",
+    "day_cos"
+  ],
+  "horizons": [
+    "1h",
+    "3h",
+    "6h"
+  ]
+}
